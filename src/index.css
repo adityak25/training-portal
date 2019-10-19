@@ -30,28 +30,15 @@ input {
   font-size: 17px;
 }
 
-button {
-  background: #7ece7e;
-  font: inherit;
-  border: 1px solid #7ece7e;
-  border-radius: 3px;
-  padding: 0.25rem 1rem;
-  margin-right: 1rem;
-  box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.26);
-  color: white;
-  cursor: pointer;
-}
-
-button:hover,
-button:active {
-  background: #6cb36c;
-  border-color: #6cb36c;
+input:invalid {
+  background-color: #ffdddd;
 }
 
 .form-control label,
 .form-control input,
 .form-control textarea,
 .form-control select {
+  font: inherit;
   width: 90%;
   display: block;
 }
@@ -70,7 +57,35 @@ button:active {
   border-radius: 3px;
   padding: 0.25rem 1rem;
   margin-right: 1rem;
+  height: 2rem;
   box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.26);
-  color: white;
+  color: #000;
   cursor: pointer;
+}
+
+.btn-primary {
+  background: #7ece7e;
+  border: 1px solid #7ece7e;
+}
+
+.btn-primary-disabled {
+  border: 1px solid #7ece7e;
+  background-color: #7ece7e;
+  color: #666666;
+  pointer-events: none;
+}
+
+.btn-primary:hover {
+  background: #6cb36c;
+  border-color: #6cb36c;
+}
+
+.btn-cancel {
+  background: rgb(177, 177, 177);
+  border-color: rgb(177, 177, 177);
+}
+
+.btn-cancel:hover {
+  background: rgb(143, 143, 143);
+  border-color: rgb(143, 143, 143);
 }

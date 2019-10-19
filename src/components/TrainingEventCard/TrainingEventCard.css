@@ -4,14 +4,15 @@
   border-radius: 10px;
   border: 2px solid #000;
   display: flex;
-  background: #fff;
+  background: #f5f3f3;
   color: #000;
   width: 10rem;
-  height: 8rem;
+  height: 7rem;
 }
 
 .event-card:hover {
-  background: #ececec;
+  background: #e7e7e7;
+  cursor: pointer;
 }
 
 .event-card h1 {
@@ -21,7 +22,7 @@
 
 .event-card p {
   margin: 0;
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 
 .event-line-item {

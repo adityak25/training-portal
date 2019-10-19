@@ -1,20 +1,23 @@
 import React from "react";
 
 import "./TrainingEventCard.css";
+import { getHighlightedText } from "./../../utilities/helper";
 
 const TrainingEventCard = props => (
-  <li className='event-card'>
+  <li className='event-card' onClick={() => props.onEditTrainingEvent()}>
     <div>
-      <h1 className='event-line-item'>{props.training.name}</h1>
-      <p className='event-line-item'>{props.training.duration} hr</p>
+      <h1 className='event-line-item'>
+        {getHighlightedText(props.trainingEvent.name, props.highlightText)}
+      </h1>
+
+      <p className='event-line-item'>{props.trainingEvent.duration} hr</p>
       <p className='event-line-item'>
-        {new Date(props.training.datetime).toDateString()}
+        {new Date(props.trainingEvent.datetime).toDateString()}
       </p>
       <p className='event-line-item'>
-        {new Date(props.training.datetime).toLocaleTimeString()}
+        {new Date(props.trainingEvent.datetime).toLocaleTimeString()}
       </p>
-      <p className='event-line-item'>#{props.training.meetingroom}</p>
-      {/* <button onClick={}>Details</button> */}
+      <p className='event-line-item'>#{props.trainingEvent.meetingroom}</p>
     </div>
   </li>
 );

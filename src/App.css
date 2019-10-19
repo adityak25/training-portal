@@ -38,6 +38,10 @@
   width: 25%;
 }
 
+.search-option:hover {
+  cursor: pointer;
+}
+
 .search-name {
   margin-left: 20px;
   width: 60%;
